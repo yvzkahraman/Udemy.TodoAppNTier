@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Udemy.TodoAppNTier.Common\Udemy.TodoAppNTier.Common.csproj" />
     <ProjectReference Include="..\Udemy.TodoAppNTier.DataAccess\Udemy.TodoAppNTier.DataAccess.csproj" />
     <ProjectReference Include="..\Udemy.ToDoAppNTier.Dtos\Udemy.ToDoAppNTier.Dtos.csproj" />
   </ItemGroup>

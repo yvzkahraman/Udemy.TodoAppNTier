@@ -16,7 +16,8 @@ namespace Udemy.ToDoAppNTier.UI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _workService.GetAll());
+            var response = await _workService.GetAll();
+            return View(response.Data);
         }
 
         public IActionResult Create()
@@ -27,19 +28,20 @@ namespace Udemy.ToDoAppNTier.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(WorkCreateDto dto)
         {
-            await _workService.Create(dto);
+            var response = await _workService.Create(dto);
             return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> Update(int id)
         {
-            return View(await _workService.GetById<WorkUpdateDto>(id));
+            var response = await _workService.GetById<WorkUpdateDto>(id);
+            return View(response.Data);
         }
 
         [HttpPost]
         public async Task<IActionResult> Update(WorkUpdateDto dto)
         {
-            await _workService.Update(dto);
+            var response = await _workService.Update(dto);
             return RedirectToAction("Index");
         }
 
