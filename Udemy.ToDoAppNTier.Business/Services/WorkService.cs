@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Udemy.TodoAppNTier.DataAccess.UnitofWork;

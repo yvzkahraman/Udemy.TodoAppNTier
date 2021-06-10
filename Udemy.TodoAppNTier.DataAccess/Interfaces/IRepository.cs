@@ -16,9 +16,9 @@ namespace Udemy.TodoAppNTier.DataAccess.Interfaces
 
         Task Create(T entity);
 
-        void Update(T entity, T unchanged);
+        void Update(T entity);
 
-        void Remove(T entity);
+        void Remove(int id);
 
         IQueryable<T> GetQuery();
     }
