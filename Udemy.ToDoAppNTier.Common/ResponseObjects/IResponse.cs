@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Udemy.ToDoAppNTier.Common.ResponseObjects
+namespace Udemy.TodoAppNTier.Common.ResponseObjects
 {
     public interface IResponse
     {

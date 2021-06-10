@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Udemy.ToDoAppNTier.Common.ResponseObjects
+namespace Udemy.ToDoAppNTier.Dtos.Interfaces
 {
-    public interface IResponse<T> : IResponse
+    public interface IDto
     {
-        T Data { get; set; }
     }
 }

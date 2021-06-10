@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -34,6 +35,9 @@ namespace Udemy.ToDoAppNTier.Business.DependencyResolvers.Microsoft
 
             services.AddScoped<IUow, Uow>();
             services.AddScoped<IWorkService, WorkService>();
+
+            services.AddTransient<IValidator<WorkCreateDto>, WorkCreateDtoValidator>();
+            services.AddTransient<IValidator<WorkUpdateDto>, WorkUpdateDtoValidator>();
 
         }
     }
